@@ -1,0 +1,23 @@
+def arctan(float,str):
+    # 输入判断
+    if(float >= -65535 and float <= 65536 ):
+        compute = True
+    else:
+        compute = False
+    # 符合输入规范则进行计算，并返回结果；否则返回"None"
+    if(compute):
+        # 反正切计算
+        ret = 0
+        get = float
+        index = 1
+        n = 0
+        while index < 10000:
+            index = index + 1
+            ret = ret+(((-1)**n)/(2*n+1))*(get**(2*n+1))
+            n = n + 1
+        ret = "%.3f" % ret
+        if (str == "角度"):
+          ret = ret / 57.3 
+    else:
+         ret = "None"
+    return ret
