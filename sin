@@ -1,0 +1,42 @@
+def pow(base,exponent):
+    return base ** exponent
+
+def faktorial(n):
+    value=float(1)
+    for i in range (1,n+1):
+        value=value*i
+    return value
+def sin(x):
+    x=x*3.14/180
+    value=x
+    sign=-1
+    n=200 #precision
+    i=3
+    while i<n:
+      value=value+(pow(x,i)/faktorial(i)*sign)
+      i=i+2
+      sign=sign*-1
+    return value
+  pi = 3.1415926535897932384626433832795028841971
+def f(n):  # Factorial Function
+    if n == 1 or n == 0:
+        return 1
+    else:
+        return n * f(n - 1)
+  def deg(x):
+    rad = x * pi/180
+    return rad
+  def sin(x):  # Taylor Expansion of sinx
+    k = 0
+    sinx = 0
+    while x >= pi:
+        x -= pi
+    if pi > x > pi / 2:
+        x = pi - x
+    while k < 15:
+        sinx += (-1)**k * x**(2*k + 1) / f(2*k + 1)
+        k += 1
+    return sinx
+        
+   
+ 
