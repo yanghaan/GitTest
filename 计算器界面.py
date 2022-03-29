@@ -62,10 +62,10 @@ btnac = tkinter.Button(root, text='AC', bd=0.5, font=(
 btnac.place(x=0, y=230, width=70, height=55)
 btnback = tkinter.Button(root, text='arcsin', font=(
     '微软雅黑', 20), fg='#4F4F4F', bd=0.5, command=lambda: pressCompute('a'))
-btnback.place(x=70, y=230, width=70, height=55)
+btnback.place(x=70, y=230, width=105, height=55)
 btndivi = tkinter.Button(root, text='arctan', font=(
     '微软雅黑', 20), fg='#4F4F4F', bd=0.5, command=lambda: pressCompute('b'))
-btndivi.place(x=140, y=230, width=70, height=55)
+btndivi.place(x=175, y=230, width=105, height=55)
 # btnmul = tkinter.Button(root, text='', font=(
 #     '微软雅黑', 20), fg="#4F4F4F", bd=0.5, command=lambda: pressCompute('c'))
 # btnmul.place(x=210, y=230, width=70, height=55)
@@ -78,11 +78,11 @@ btnadd.place(x=210, y=340, width=70, height=55)
 btnequ = tkinter.Button(root, text='=', bg='orange', font=(
     '微软雅黑', 20), fg=('#4F4F4F'), bd=0.5, command=lambda: pressEqual())
 btnequ.place(x=210, y=395, width=70, height=110)
-# btnper = tkinter.Button(root, text='%', font=('微软雅黑', 20), fg=(
-#     '#4F4F4F'), bd=0.5, command=lambda: pressCompute('%'))
-# btnper.place(x=0, y=450, width=70, height=55)
+btnper = tkinter.Button(root, text='Π', font=('微软雅黑', 20), fg=(
+    '#4F4F4F'), bd=0.5, command=lambda: pressCompute('f'))
+btnper.place(x=0, y=450, width=70, height=55)
 btnpoint = tkinter.Button(root, text='°', font=('微软雅黑', 20), fg=(
-    '#4F4F4F'), bd=0.5, command=lambda: pressCompute('p'))
+    '#4F4F4F'), bd=0.5, command=lambda: pressCompute('g'))
 btnpoint.place(x=140, y=450, width=70, height=55)
 
 
@@ -124,13 +124,18 @@ def pressCompute(sign):
     if sign == 'AC':  # 如果按下的是'AC'按键，则清空列表内容，讲屏幕上的数字键设置为默认数字0
         lists.clear()
         result.set(0)
-    if sign == 'b':  # 如果按下的是退格‘’，则选取当前数字第一位到倒数第二位
-        a = num[0:-1]
-        lists.clear()
-        result.set(a)
-
+    if sign == 'a':
+        function()
+        # 如果按下的是退格‘’，则选取当前数字第一位到倒数第二位
+        # a = num[0:-1]
+        # lists.clear()
+        # result.set(a)
+    if sign == 'b':
+        function()
 
 # 获取运算结果函数
+
+
 def pressEqual():
     global lists
     global isPressSign
