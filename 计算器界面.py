@@ -82,7 +82,7 @@ btnequ.place(x=210, y=395, width=70, height=110)
 #     '#4F4F4F'), bd=0.5, command=lambda: pressCompute('%'))
 # btnper.place(x=0, y=450, width=70, height=55)
 btnpoint = tkinter.Button(root, text='°', font=('微软雅黑', 20), fg=(
-    '#4F4F4F'), bd=0.5, command=lambda: pressCompute('f'))
+    '#4F4F4F'), bd=0.5, command=lambda: pressCompute('p'))
 btnpoint.place(x=140, y=450, width=70, height=55)
 
 
