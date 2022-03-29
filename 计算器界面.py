@@ -60,19 +60,19 @@ btn0.place(x=70, y=450, width=70, height=55)
 btnac = tkinter.Button(root, text='AC', bd=0.5, font=(
     '黑体', 20), fg='orange', command=lambda: pressCompute('AC'))
 btnac.place(x=0, y=230, width=70, height=55)
-btnback = tkinter.Button(root, text='sin', font=(
+btnback = tkinter.Button(root, text='arcsin', font=(
     '微软雅黑', 20), fg='#4F4F4F', bd=0.5, command=lambda: pressCompute('a'))
 btnback.place(x=70, y=230, width=70, height=55)
-btndivi = tkinter.Button(root, text='cos', font=(
+btndivi = tkinter.Button(root, text='arctan', font=(
     '微软雅黑', 20), fg='#4F4F4F', bd=0.5, command=lambda: pressCompute('b'))
 btndivi.place(x=140, y=230, width=70, height=55)
-btnmul = tkinter.Button(root, text='arcsin', font=(
-    '微软雅黑', 20), fg="#4F4F4F", bd=0.5, command=lambda: pressCompute('c'))
-btnmul.place(x=210, y=230, width=70, height=55)
-btnsub = tkinter.Button(root, text='arctan', font=('微软雅黑', 20),
+# btnmul = tkinter.Button(root, text='', font=(
+#     '微软雅黑', 20), fg="#4F4F4F", bd=0.5, command=lambda: pressCompute('c'))
+# btnmul.place(x=210, y=230, width=70, height=55)
+btnsub = tkinter.Button(root, text='sin', font=('微软雅黑', 20),
                         fg=('#4F4F4F'), bd=0.5, command=lambda: pressCompute('d'))
 btnsub.place(x=210, y=285, width=70, height=55)
-btnadd = tkinter.Button(root, text='', font=('微软雅黑', 20),
+btnadd = tkinter.Button(root, text='cos', font=('微软雅黑', 20),
                         fg=('#4F4F4F'), bd=0.5, command=lambda: pressCompute('e'))
 btnadd.place(x=210, y=340, width=70, height=55)
 btnequ = tkinter.Button(root, text='=', bg='orange', font=(
