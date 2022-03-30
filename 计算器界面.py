@@ -130,10 +130,88 @@ def pressCompute(sign):
         # a = num[0:-1]
         # lists.clear()
         # result.set(a)
+    if sign == 'e':
+        cos.mycos()
     if sign == 'b':
-        function()
+        arctan()
 
 # 获取运算结果函数
+
+
+def mycos(x, e=1e-3):
+    item = 1
+    sum = 0
+    i = 0
+    f = 1
+    while abs(item) > e:
+        item = f * ((x**i) / fact(i))
+        sum += item
+        f = -f
+        i += 2
+
+    return sum
+
+
+def fact(n):
+    result = 1
+    for i in range(1, n+1):
+        result *= i
+
+    return result
+
+
+class MyCos(object):
+    def __init__(self, e=1e-3):
+        self.e = e
+
+    def mycos(self, x):
+        item = 1
+        sum = 0
+        i = 0
+        f = 1
+        while abs(item) > self.e:
+            item = f * ((x**i) / fact(i))
+            sum += item
+            f = -f
+            i += 2
+
+        return sum
+
+    def fact(self, n):
+        result = 1
+        for i in range(1, n+1):
+            result *= i
+
+        return result
+
+
+cos = MyCos(e=1e-3)
+#  cos.mycos()#输入待计算数值
+
+
+def arctan(float, str):
+    # 输入判断
+    if(float >= -65535 and float <= 65536):
+        compute = True
+    else:
+        compute = False
+    # 符合输入规范则进行计算，并返回结果；否则返回"None"
+    if(compute):
+        # 反正切计算
+        ret = 0
+        get = float
+        index = 1
+        n = 0
+        while index < 10000:
+            index = index + 1
+            ret = ret+(((-1)**n)/(2*n+1))*(get**(2*n+1))
+            n = n + 1
+        ret = "%.3f" % ret
+        if (str == "角度"):
+            ret = ret / 57.3
+    else:
+        ret = "None"
+    return ret
 
 
 def pressEqual():
