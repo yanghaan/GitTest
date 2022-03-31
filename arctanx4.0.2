@@ -1,0 +1,29 @@
+def arctanx(float,str):
+   tanx=float
+    # 输入判断 
+   if(tanx >= -65535 and tanx <= 65535and str == "弧度" ):
+        compute = True
+   if(tanx >= -65535 and tanx <= 65535and str == "角度" ):
+       compute = True
+   else:
+        compute = False
+    # 符合输入规范则进行计算，并返回结果；否则返回"None"
+   if(compute):
+        # 反正切计算
+        ret = 0
+        get = tanx
+        index = 1
+        n = 0
+        while index < 100000:
+            index = index + 1
+            ret = ret+(((-1)**n)/(2*n+1))*(get**(2*n+1))
+            n = n + 1
+        ret = "%.3f" % ret
+        if (str == "角度"):
+          ret = ret * 57.3 
+          print(tanx,"对应的反正切角度值arctanx为：",ret)
+        if (str == "弧度"):
+          print(tanx,"对应的反正切弧度值arctanx为：",ret)
+   else:
+         ret = "None"
+   return ret
